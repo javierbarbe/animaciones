@@ -1,0 +1,14 @@
+.div {
+  height: 10em;
+  width: 10em;
+  border: solid 2px blue;
+  background: lightgreen;
+  margin: 50px 0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}

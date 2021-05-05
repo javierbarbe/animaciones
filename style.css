@@ -12,3 +12,133 @@
   width: 100%;
   flex-direction: column;
 }
+
+.flotante {
+  animation: flotar 2.6s linear infinite;
+  z-index: 100;
+  position: absolute;
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.estrella {
+  top: 0;
+  animation: estrella 2.6s linear infinite;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: red;
+
+  position: absolute;
+}
+.color {
+  background-color: red;
+}
+
+.padre {
+  display: flex;
+  height: 400px;
+}
+
+.planeta {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.burbuja {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.3;
+  z-index: 1;
+  position: relative;
+  top: 0;
+  left: 12%;
+
+  animation: burbuja 40s linear infinite;
+}
+
+.bajada {
+  animation: bajada 8s linear infinite;
+}
+
+@keyframes bajada {
+  0% {
+    top: 0px;
+    opacity: 0.8;
+  }
+  15% {
+    opacity: 0.4;
+  }
+  25% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0.4;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes burbuja {
+  0% {
+    top: 0px;
+    opacity: 0.8;
+  }
+  15% {
+    opacity: 0.4;
+  }
+  25% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0.4;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes estrella {
+  0% {
+    bottom: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
